@@ -65,7 +65,7 @@ router.post("/edit/:id", isLoggedIn, async (req, res) => {
   };
   await db_connect.query("UPDATE biblioteca set ? WHERE id = ?", [newLibro, id]);
   // console.log(newLink);
-  req.flash("success", "Enlace editado satifactoriamente");
+  req.flash("success", "Libro editado satifactoriamente");
   res.redirect("/biblioteca");
 });
 
