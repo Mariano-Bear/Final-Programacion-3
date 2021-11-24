@@ -70,7 +70,7 @@ router.post("/edit/:id", isLoggedIn, async (req, res) => {
   };
   await db_connect.query("UPDATE prestar set ? WHERE id = ?", [newPrestar, id]);
    console.log(newPrestar);
-  req.flash("success", "Enlace editado satifactoriamente");
+  req.flash("success", "Libro Prestado editado satifactoriamente");
   res.redirect("/prestar");
 });
 
