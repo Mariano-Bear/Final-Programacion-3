@@ -1,0 +1,40 @@
+
+<div class="container p-4">
+  <div class="row">
+
+    {{#each prestar}}
+
+      <table class="table">
+        
+        <tbody>
+          <tr>
+            <td style="color: whitesmoke">{{nombre}}</td>
+            <td style="color: whitesmoke">{{correo}}</td>
+            <td style="color: whitesmoke">{{nombre_libro}}</td>
+            <td style="color: whitesmoke">{{cant}}</td>
+            <td style="color: whitesmoke">{{autor}}</td>
+            <td style="color: whitesmoke">{{editorial}}</td>
+            <td style="color: whitesmoke">{{timeago fecha}}</td>
+            <td>
+              
+              <a class="btn btn-warning" href="/prestar/list">
+                VOLVER
+              </a>
+
+              
+
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    {{else}}
+ 
+
+    {{/each}}
+    
+  </div>
+
+</div>
+ 

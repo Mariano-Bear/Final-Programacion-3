@@ -1,0 +1,33 @@
+
+<div class="col-md-4 mx-auto">
+
+    <div class="card">
+        <div class="card-body">
+            <form action="/biblioteca/edit/{{libro.id}}" method="POST">
+                <div class="form-group">
+                    <input type="text" name="autor_titulo_anio" class="form-control" placeholder="Autor-Titulo-Año" value="{{libro.autor_titulo_anio}}" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="number" name="cant" class="form-control" placeholder="Cantidad en Stock" value="{{libro.cant}}">
+                </div>
+                 <div class="form-group">
+                    <input type="text" name="cantpag" class="form-control" placeholder="Cantidad de Paginas" value="{{libro.cantpag}}">
+                </div>
+                 <div class="form-group">
+                    <input type="text" name="editorial" class="form-control" placeholder="Editorial" value="{{libro.editorial}}">
+                </div>
+                 <div class="form-group">
+                    <input type="text" name="precio_compra" class="form-control" placeholder="Precio de Compra" value="{{libro.precio_compra}}">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="precio_venta" class="form-control" placeholder="Precio de Venta" value="{{libro.precio_venta}}">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

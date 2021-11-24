@@ -1,0 +1,57 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+
+            <div class="card">
+                <div class="card-body">
+                    <form action="/prestar/add" method="POST">
+                        <div class="form-group">
+                            Nombre del Solicitante
+                            <input type="text" name="nombre" class="form-control" placeholder="Nombre del Solicitante" autofocus>
+                            
+                        </div>
+                        <div class="form-group">
+                            E-mail 
+                            <input type="email" name="correo" class="form-control" placeholder="E-mail">
+                            
+                        </div>
+
+                        <div class="form-group">
+                            Autor - Nombre de libro
+                            <input type="text" name="nombre_libro" class="form-control" placeholder="Autor-Nombre del libro">
+                            
+                        </div>
+                        <div class="form-group">
+                            Libros Prestados
+                            <input type="number" name="cant" class="form-control" placeholder="Cantidad de Libros Prestados">
+                            
+                        </div>
+                        <div class="form-group">
+                            Autor
+                            <input type="text" name="autor" class="form-control" placeholder="Autor">
+                            
+                        </div>
+                        <div class="form-group">
+                            Editorial
+                            <input type="text" name="editorial" class="form-control" placeholder="Editorial">
+                            
+                        </div>
+
+                        <div class="form-group">
+                            Fecha de Entrega
+                            <input type="date" name="fecha" class="form-control" placeholder="Fecha de Entrega">
+                            
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,97 @@
+  
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+            <h1 class="display-4 mt-1" style="color: whitesmoke;">Listado de Libros</h1>
+           <a class="btn btn-secondary btn-lg" href="/biblioteca/add">AGREGAR LIBRO</a>
+           <a
+                class="btn btn-info btn-lg"
+                src="imprimir.jpg"
+                name="Submit"
+                onclick="javascript:window.print()"
+              >IMPRIMIR</a>
+        </div>
+
+
+<div class="container p-4">
+    
+    <div class="row">
+        
+        {{#each libros}}
+
+       
+
+        <div class="col-md-3">
+             
+            <div class="card text-center">
+                <div class="card-body">
+                    {{!-- <a href="{{url}}" target="_blank">--}}
+                        {{!-- <div class="card-header"> --}}
+                        <h6 class="card-title text-uppercase" style="color: rgb(139, 173, 201);">
+                           Autor-Titulo-Año:
+                        </h6>
+
+                        <h6 class"my-0 font-weight-bold">{{autor_titulo_anio}}</h6>
+                        
+                    {{!-- </div> --}}
+                            
+                        <h6 class="card-title text-uppercase" style="color: rgb(139, 173, 201);">
+                            Cantidad en Stock:
+                        </h6>
+
+                        <h6>{{cant}}</h6>
+
+                        <h6 class="card-title text-uppercase" style="color: rgb(139, 173, 201);">
+                            Cantidad de Paginas:
+                        </h6>
+
+                        <h6>{{cantpag}}</h6>
+
+                         <h6 class="card-title text-uppercase" style="color: rgb(139, 173, 201);">
+                            Editorial:
+                        </h6>
+
+                        <h6>{{editorial}}</h6>
+
+                         <h6 class="card-title text-uppercase" style="color: rgb(139, 173, 201);">
+                            Precio de Compra: 
+                        </h6>
+
+                        <h6>{{precio_compra}}</h6>
+
+                        <h6 class="card-title text-uppercase" style="color: rgb(139, 173, 201);">
+                            Precio de Venta:
+                        </h6>
+
+                        {{precio_venta}}
+                        <h6></h6>
+                 
+                    <a class="btn btn-danger" href="/biblioteca/delete/{{id}}">
+                        Borrar 
+                    </a>
+                    <a class="btn btn-warning" href="/biblioteca/edit/{{id}}">
+                        Editar
+                    </a>
+                    
+                    {{!-- <a class="btn btn-info" href="/prestar/add">
+                        Prestar
+                    </a> --}}
+
+                        {{!-- <div style="display:flex; flex-wrap: wrap; justify-content:center; align-items:center;">
+                    <p class="icon_whatsapp" style="margin-top:5px; text-transform:uppercase;   ">Mi WhatsApp:&nbsp;</p>
+                    <a href="https://api.whatsapp.com/send?phone=5492615253398&text=Hola,%20estoy%20interesado/a%20en%20la%20compra%20de%20este%20producto%20BACHAS%20A%20PEDIDO" target="_blank">
+                        <i class="fab fa-whatsapp fa-2x class_whatsapp"></i>
+                    </a>
+                </div> --}}
+
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>NO TIENE LIBROS GUARDADOS </p>
+                <a href="/biblioteca/add">CREA UNO!</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

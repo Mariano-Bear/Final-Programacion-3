@@ -1,0 +1,25 @@
+
+<div class="col-md-4 mx-auto">
+
+    <div class="card">
+        <div class="card-body">
+            <form action="/mobiliario/edit/{{mobiliario.id}}" method="POST">
+                <div class="form-group">
+                    <input type="text" name="descripcion" class="form-control" placeholder="Descripcion" value="{{mobiliario.descripcion}}" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="sala" class="form-control" placeholder="Curso o Sala" value="{{mobiliario.sala}}">
+                </div>
+                 <div class="form-group">
+                    <input type="number" name="cant" class="form-control" placeholder="Cantidad en Stock" value="{{mobiliario.cant}}">
+                </div>
+                 
+                <div class="form-group">
+                    <button class="btn btn-success btn-block">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
